@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #092635;
+  color: #fff;
+}
+nav {
+  background: #00101a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #76e5fc;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.intro-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.intro-text h1 {
+  color: #76e5fc;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0.5rem 0;
+}
+.intro-text h2 {
+  font-size: 1.5rem;
+  margin: 0.2rem 0;
+}
+.intro-text p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #bed2e0;
+  width: 350px;
+}
+
+.profile-photo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradient-ring {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: conic-gradient(#76e5fc, #5e60ce, #b5179e, #f7b801, #76e5fc);
+  padding: 8px;
+  /* animation: spin 5s linear infinite; */
+  box-shadow: 0 0 32px 12px #45c4b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-photo {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.type-effect {
+  color: #76e5fc;
+  font-weight: 700;
+  animation: typing 1.5s steps(12) infinite alternate;
+}
+@keyframes typing {
+  0% { width: 5ch; }
+  50% { width: 12ch; }
+  100% { width: 5ch; }
+}
+
+/* Social icons below paragraph */
+.social-icons {
+  display: flex;
+  gap: 24px;
+  margin-top: 18px;
+}
+.social-icons a {
+  color: #76e5fc;
+  font-size: 1.7rem;
+  background: #092635;
+  border-radius: 50%;
+  padding: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 15px 2px #45c4b030;
+  text-decoration: none;
+}
+.social-icons a:hover {
+  color: #5e60ce;
+  transform: scale(1.2);
+  box-shadow: 0 0 25px 5px #76e5fc80;
+}
+
+@media (max-width: 850px) {
+  main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .intro-section {
+    flex-direction: column;
+  }
+}
